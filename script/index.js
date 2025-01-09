@@ -83,5 +83,6 @@ function countDownDay() {
     
 }
 
-export default countDownDay;
-countDownDay();
+window.addEventListener('DOMContentLoaded', (event) => {
+    countDownDay();
+});
