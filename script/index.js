@@ -62,7 +62,7 @@ function countDownDay() {
     sunday.setMinutes(0);
     sunday.setSeconds(0);
     sunday.setMilliseconds(0);
-    
+
     if (sunday < now) sunday.setDate(sunday.getDate() + 7);
     millisecondsLeft = sunday - now;
     
@@ -80,10 +80,8 @@ function countDownDay() {
     else {
         leftText.innerHTML = `${daysLeft} Days To Go`;
     }
-
-
     
 }
 
+export default countDownDay;
 countDownDay();
-
