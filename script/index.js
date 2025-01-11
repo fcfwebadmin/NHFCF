@@ -64,6 +64,49 @@ function countDownDay() {
     
 }
 
+// Google Places API URL and parameters
+const url = "https://maps.googleapis.com/maps/api/place/details/json";
+const params = {
+    placeid: 'ChIJH9o2R2MtK4gRRdU0TyvVT0A',  // Place ID of the location
+    key: API_KEY  // Your API key
+};
+
+// Construct URL with parameters
+const urlWithParams = `${url}?placeid=${params.placeid}&key=${params.key}`;
+
+// Fetch data using JavaScript fetch()
+fetch(urlWithParams)
+  .then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Check if the result contains reviews
+    if (data.result && data.result.reviews) {
+      const reviews = data.result.reviews;
+      reviews.forEach(review => {
+        const authorName = review.author_name || 'N/A';
+        const rating = review.rating || 'N/A';
+        const text = review.text || 'No review text available';
+        const time = new Date(review.time * 1000).toLocaleString(); // Convert Unix timestamp to readable format
+        
+        console.log(`Review by ${authorName}:`);
+        console.log(`Rating: ${rating}`);
+        console.log(`Review: ${text}`);
+        console.log(`Time: ${time}`);
+        console.log('-'.repeat(50));
+      });
+    } else {
+      console.log('No reviews available for this place.');
+    }
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
     countDownDay();
 });
