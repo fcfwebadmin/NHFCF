@@ -34,31 +34,12 @@ window.addEventListener("scroll", () => {
 });
 
 
-let aboutDrop = document.querySelector(".drop-about");
-let isClicked = false;
-
-aboutDrop.addEventListener("click", function(event) {
-
-    isClicked = !isClicked;    
-
-    if(isClicked) {
-        aboutDrop.children[0].classList.remove("hidden");
-    }else {
-        aboutDrop.children[0].classList.add("hidden");
-    }
-});
-
-aboutDrop.addEventListener("mouseleave", () => {
-    isClicked = false;
-    aboutDrop.children[0].classList.add("hidden");
-});
-
 function countDownDay() {
     let leftText = document.querySelector(".daysLeft");
     var now = new Date();
     var sunday = new Date();
     sunday.setDate(now.getDate() - now.getDay());     
-    sunday.setHours(10); 
+    sunday.setHours(0); 
     sunday.setMinutes(0);
     sunday.setSeconds(0);
     sunday.setMilliseconds(0);

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
-    <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full overflow-hidden">
+    <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
         <div class="logo">
             <img src="../assets/img/New Horizon_White.png" alt="logo" class="xl:w-[5%] w-[7%] justify-start inline">
             <strong class="text-white">New Horizons</strong>
@@ -17,7 +17,15 @@
 
         <ul class="flex-row justify-end gap-4 hidden xl:flex text-white">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li class="relative cursor-pointer w-max drop-about">About Us
+                <div class="absolute hidden bg-zinc-900 w-max p-4">
+                    <ul>
+                        <li><a href="../pages/about.html" class="text-white">Who we are?</a></li>
+                            
+                        <li><a href="" class="text-white">History</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="#">Beliefs</a></li>
             <li><a href="#">Give</a></li>
             <li><a href="#">Contact</a></li>
@@ -57,7 +65,7 @@
         <img src="../assets/img/vision.png" alt="" class="z-50 absolute xl:w-[20%] lg:w-[35%] md:w-[35%] w-[40%] xl:bottom-32 lg:bottom-10 md:bottom-32 md:left-10 bottom-64 left-6">
     </div>
 
-    <div class="time-service w-screen bg-white p-5">
+    <div class="time-service w-screen bg-white p-5 relative -z-20">
         <div class="grid lg:grid-cols-3 grid-cols-1 gap-3 place-content-center justify-items-center">
             <div class="mass text-center xl:w-2/4 w-3/5">
                 <h1 class="font-bold text-2xl">Regular Service</h1>
@@ -75,6 +83,10 @@
                 <p>Fellowship follows after the faith group meeting for a shared meal to encourage one another.</p>
             </div>
         </div>
+    </div>
+
+    <div class="our-team text-center bg-white p-10">
+        <a href="../pages/teams.html" class="p-3 text-xl font-bold rounded-full bg-amber-500 shadow-md shadow-gray-400 m-10">Our Team</a>
     </div>
 
     <div class="footer h-full w-full bg-zinc-900">
@@ -120,6 +132,7 @@
 
 
     <script src="../script/about.js"></script>
+    <script src="../script/imported.js" type="module"></script>
     
 </body>
 </html>

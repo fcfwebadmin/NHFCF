@@ -1,0 +1,20 @@
+header.team-section {
+    background-image: url("../assets/img/bg_team.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header.beliefs-section {
+    background-image: url("../assets/img/bg_beliefs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cursive-font {
+    font-family: "Lavishly Yours", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
