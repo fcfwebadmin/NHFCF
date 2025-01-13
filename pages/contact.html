@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="../styles/bg_style.css">
+</head>
+<body>
+    <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
+        <div class="logo">
+            <img src="../assets/img/New Horizons.png" alt="logo" class="xl:w-[5%] w-[7%] justify-start inline">
+            <strong>New Horizons</strong>
+        </div>
+
+        <ul class="flex-row justify-end gap-4 hidden xl:flex ">
+            <li><a href="../index.html">Home</a></li>
+            <li class="relative cursor-pointer w-max drop-about">About Us
+                <div class="absolute hidden bg-zinc-900 w-max p-4">
+                    <ul>
+                        <li><a href="../pages/about.html" class="text-white">Who we are?</a></li>
+
+                        <li><a href="../pages/teams.html" class="text-white">History</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../pages/beliefs.html">Beliefs</a></li>
+            <li><a href="#">Give</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header
+        class="contact-section bg-fixed h-[40vh] w-full header-team bg-white flex flex-col items-center justify-center text-center">
+        <h1 class="font-bold text-6xl">Contact Us</h1>
+    </header>
+
+
+
+    <script src="../script/imported.js" type="module"></script>
+    
+</body>
+</html>

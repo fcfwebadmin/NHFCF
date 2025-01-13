@@ -12,9 +12,29 @@ header.beliefs-section {
     background-size: cover;
 }
 
+
+header.beliefs-section {
+    background-image: url("../assets/img/bg_give.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header.contact-section {
+    background-image: url("../assets/img/bg_contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .cursive-font {
     font-family: "Lavishly Yours", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.cont {
+    overflow-wrap: break-word;
 }
   

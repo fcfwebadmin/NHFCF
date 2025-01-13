@@ -39,7 +39,11 @@ function countDownDay() {
     var now = new Date();
     var sunday = new Date();
     sunday.setDate(now.getDate() - now.getDay());     
-    sunday.setHours(0); 
+    console.log(now.getDate());
+    console.log(now.getDay());
+
+    
+    sunday.setHours(10); 
     sunday.setMinutes(0);
     sunday.setSeconds(0);
     sunday.setMilliseconds(0);
@@ -50,10 +54,12 @@ function countDownDay() {
     
     const msInDay = 1000 * 60 * 60 * 24;
     let res = millisecondsLeft / msInDay;
+
     let daysLeft = Math.ceil(res);
     
     
-    if(daysLeft <= 0) {
+    
+    if(daysLeft == 7) {
         leftText.innerHTML = 'Today is The Day';
     }else if(daysLeft == 1) {
         leftText.innerHTML = `${daysLeft} Day To Go`;
