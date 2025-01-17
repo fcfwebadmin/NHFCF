@@ -6,153 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="/assets/img/New Horizons.ico">
     <title>New Horizon</title>
 </head>
 
 <body>
 
-    <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
-        <div class="logo">
-            <img src="assets/img/New Horizons.png" alt="logo" class="xl:w-[5%] w-[7%] justify-start inline">
-            <strong>New Horizons</strong>
-        </div>
-
-        <ul class="flex-row justify-end gap-4 hidden xl:flex ">
-            <li><a href="index.html">Home</a></li>
-            <li class="relative cursor-pointer w-max drop-about">About Us
-                <div class="absolute hidden bg-zinc-900 w-max p-4">
-                    <ul>
-                        <li><a href="pages/about.html" class="text-white">Who we are?</a></li>
-                            
-                        <li><a href="" class="text-white">History</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="#">Beliefs</a></li>
-            <li><a href="#">Give</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main class="relative bg-[#deddd8] overflow-hidden xl:h-screen lg:h-[60vh] md:h-[100vh] sm:h-[100vh] h-[50vh]">
-        <p
-            class="sub-title text-white xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-xs font-bold absolute z-10 top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-            Filipino Christian Fellowship</p>
-        <img src="assets/img/bg.png" alt="background" class="absolute bottom-0" id="bg">
-        <img src="assets/img/text.png" alt="New Horizon" class="absolute bottom-0" id="text">
-        <img src="assets/img/trees.png" alt="trees" class="absolute bottom-0" id="trees">
-        <img src="assets/img/cloud1.png" alt="cloud1" class="absolute bottom-0" id="cloud1">
-        <img src="assets/img/cloud2.png" alt="cloud2" class="absolute bottom-0" id="cloud2">
-    </main>
-
-    <div class="time bg-zinc-900 text-center">
-        <h1 class="font-bold lg:text-9xl text-5xl text-white pt-10"><span class="daysLeft font-bold">0</span> To</h1>
-        <h1 class="font-bold lg:text-9xl text-5xl text-white">Worship With Us</h1>
-        <h3 class="text-white pt-4 px-5">Every Sunday <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">@</span> 10:00 am</h3>
-        <h3 class="text-white pb-10 px-5">We are located <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">@</span> Lansing United Church Community Hall 1 49 Bogert Avenue, Toronto, M2N 1K4</h3>
-
+    <div class="icon-load fixed top-1/2 left-1/2 z-20 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden opacity-0">
+        <img src="/assets/img/loading.gif" alt="">
     </div>
 
-    <div class="about bg-[#202F30]">
-        <div class="xl:p-20 p-10 text-center">
-            <h1 class=" text-5xl font-bold rev-text">Welcome to the New Horizons</h1>
-            <div class="text-content">
-                <p class="xl:text-2xl lg:text-xl md:text-xl text-2xl xl:px-48 py-3 lg:px-20 rev-text w-3/4 justify-self-center justify-items-center m-auto">
-                    We have come together from diverse Filipino culture and many different
-                    backgrounds to celebrate our love relationship with God.
-                </p>
-                <p class="xl:text-2xl lg:text-xl md:text-xl text-2xl xl:px-48 py-10 lg:px-3 rev-text w-3/4 justify-self-center justify-items-center m-auto">
-                    We hope you will find our community to be a place where you can belong, believe and become. If we
-                    can encourage you on your journey in any way, please let us know.
-                </p>
-
-                <div class="vision text-center">
-                    <h1 class="text-white text-4xl font-bold rev-text pb-5">Love <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">God</span></h1>
-                    <h1 class="text-white text-4xl font-bold rev-text pb-5">Love <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">People</span></h1>
-                    <h1 class="text-white text-4xl font-bold rev-text pb-5">Make <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">Disciples</span></h1>
-                </div>
+    <div id="loading-state">
+        <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
+            <div class="logo">
+                <img src="/assets/img/New Horizons.png" alt="logo" class="xl:w-[5%] w-[7%] justify-start inline">
+                <strong>New Horizons</strong>
             </div>
-        </div>
 
-        <section class="pb-20">
-            <div class="py-8 px-10 mx-auto max-w-screen-xl sm:py-6 lg:px-12">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
-
-                    <div class="col-span-2 sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col rounded-lg">
-                        <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow rev-text">
-                            <img src="assets/new_img/2.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Community</h3>
-                        </div>
+            <ul class="flex-row justify-end gap-4 hidden lg:flex ">
+                <li><a href="index.html">Home</a></li>
+                <li class="relative cursor-pointer w-max drop-about">About Us
+                    <div class="absolute hidden bg-zinc-900 w-max p-4 about-btn">
+                        <ul>
+                            <li><a href="/pages/about.html" class="text-white">Who we are?</a></li>
+                                
+                            <li><a href="" class="text-white">Our Team</a></li>
+                        </ul>
                     </div>
+                </li>
+                <li><a href="/pages/beliefs.html">Beliefs</a></li>
+                <li><a href="/pages/give.html">Give</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
 
-                    <div class="col-span-2 sm:col-span-1 md:col-span-2 rounded-lg">
-                        <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4 rev-text">
-                            <img src="assets/new_img/3.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Empower Young People</h3>
-                        </div>
-                        <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 rounded-lg">
-                            <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 rev-text">
-                                <img src="assets/new_img/5.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Praise</h3>
-                            </div>
-                            <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 rev-text">
-                                <img src="assets/new_img/6.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                                <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Worship</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col rounded-lg rev-text">
-                        <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow rev-text">
-                            <img src="assets/church/2.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
-                            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Get In Touch</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="footer h-full w-full bg-zinc-900">
-        <div class="text-footer grid lg:grid-cols-2 grid-cols-1 flex justify-center">
-            <div class="icons content-center m-10">
-                <a href="mailto:disciple@fcfellowship.ca" class="block pb-4">
-                    <svg  class="email inline me-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20"><path fill="white" d="m440 6.5-416 239.9c-34.4 19.9-31.1 70.8 5.7 85.9l114.3 47.3v84.4c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zm-248 457.5v-64.6l36.6 15.1zm212.6-28.7-153.8-63.5 140.2-202.3c10.7-15.5-9.5-33.5-23.7-21.2l-211.5 184.3-107.8-44.6 416-240z"/></svg>
-                    <strong class="text-sm text-white font-bold">
-                        disciple@fcfellowship.ca
-                    </strong>
-                </a>
-
-                <a class="block pb-4">
-                    <svg class="contact inline me-3" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="lg:hidden flex items-center z-20">
+                <button class="text-white focus:outline-none" id="hamburger-icon">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                        
-                    <strong class="text-sm text-white font-bold">
-                        647-898-4769
-                    </strong>
-                </a>
-
-                <a href="https://www.facebook.com/FCFTorontoCA" class="block pb-4">
-                    <svg class="facebook inline me-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20"><rect fill="#1877f2" height="512" rx="15%" width="512"/><path d="m355.6 330 11.4-74h-71v-48c0-20.2 9.9-40 41.7-40h32.3v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6v56.4h-65v74h65v182h80v-182z" fill="#fff"/></svg>
-                    <strong class="text-sm text-white font-bold">
-                        Filipino Christian Fellowship of Toronto
-                    </strong>
-                </a>
-
-                <a href="https://maps.app.goo.gl/WxfH1E4V92j1qXNN7" class="block pb-4">
-                    <svg class="loc inline me-3" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="25"><path d="m52.5733 29.11c0-9.3149-7.1338-16.8923-15.9034-16.8923s-15.9034 7.5773-15.9034 16.8963c.0027.4653.2238 11.6088 12.9612 31.2452a3.4626 3.4626 0 0 0 2.8174 1.9343c1.8394 0 3.0941-2.0266 3.2162-2.2327 12.8187-19.6473 12.8187-30.5074 12.812-30.9508zm-15.9033 6.8035a7.0826 7.0826 0 1 1 7.0826-7.0826 7.0907 7.0907 0 0 1 -7.0826 7.0826z" fill="#d22f27"/><path d="m52.5733 29.11c0-9.3149-7.1338-16.8923-15.9034-16.8923a14.96 14.96 0 0 0 -3.8645.5254c8.3948.4493 15.0989 7.8225 15.0989 16.849.0068.4436.0068 11.3036-12.812 30.9509a5.8543 5.8543 0 0 1 -.5865.7972 2.8549 2.8549 0 0 0 2.0393.9534c1.8394 0 3.0941-2.0266 3.2162-2.2327 12.8187-19.6474 12.8187-30.5075 12.812-30.9509z" fill="#ea5a47"/><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m36.5451 62.2935a3.4628 3.4628 0 0 1 -2.8174-1.9343c-12.7377-19.6364-12.9585-30.7799-12.9612-31.2452 0-9.3191 7.1337-16.8964 15.9034-16.8964s15.9034 7.5773 15.9034 16.8924c.0068.4436.0068 11.3036-12.812 30.9509-.1221.206-1.3768 2.2326-3.2162 2.2326z"/><path d="m36.67 35.9135a7.0826 7.0826 0 1 1 7.0827-7.0826 7.0906 7.0906 0 0 1 -7.0827 7.0826z"/></g></svg>
-                    <strong class="text-sm text-white font-bold">
-                        Lansing United Church Community Hall 1 49 Bogert Avenue, Toronto, M2N 1K4
-                    </strong>
-                </a>
+                </button>
             </div>
-            <div class="text justify-items-center text-center py-20 px-10 place-items-center">
-                <img src="assets/img/New Horizon_White.png" alt="" class="w-16 m-auto">
-                <p class="text-white text-xs">© 2019 - 2024 Filipino Christian Fellowship Of Toronto, Ontario</p>
+        
+            <ul id="mobile-menu" class="flex-row justify-end gap-4 lg:hidden hidden absolute top-0 left-0 w-full bg-zinc-900 p-4">
+                <li><a href="index.html" class="text-white">Home</a></li>
+                <li class="relative cursor-pointer w-max drop-about text-white">About Us
+                    <div class="about-btn hidden bg-zinc-800 w-max p-4">
+                        <ul>
+                            <li><a href="/pages/about.html" class="text-white">Who we are?</a></li>
+                            <li><a href="/pages/teams.html" class="text-white">Our Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/pages/beliefs.html" class="text-white">Beliefs</a></li>
+                <li><a href="/pages/give.html" class="text-white">Give</a></li>
+                <li><a href="/pages/contact.html" class="text-white">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="relative bg-[#deddd8] overflow-hidden xl:h-screen lg:h-[60vh] md:h-[100vh] sm:h-[100vh] h-[50vh]">
+            <p
+                class="sub-title text-white xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-xs font-bold absolute z-10 top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                Filipino Christian Fellowship</p>
+            <img src="assets/img/bg.png" alt="background" class="absolute bottom-0" id="bg">
+            <img src="assets/img/text.png" alt="New Horizon" class="absolute bottom-0" id="text">
+            <img src="assets/img/trees.png" alt="trees" class="absolute bottom-0" id="trees">
+            <img src="assets/img/cloud1.png" alt="cloud1" class="absolute bottom-0" id="cloud1">
+            <img src="assets/img/cloud2.png" alt="cloud2" class="absolute bottom-0" id="cloud2">
+        </main>
+
+        <div class="time bg-zinc-900 text-center">
+            <h1 class="font-bold lg:text-9xl text-5xl text-white pt-10"><span class="daysLeft font-bold">0</span> To</h1>
+            <h1 class="font-bold lg:text-9xl text-5xl text-white">Worship With Us</h1>
+            <h3 class="text-white pt-4 px-5">Every Sunday <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">@</span> 10:00 am</h3>
+            <h3 class="text-white pb-10 px-5">We are located <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">@</span> Lansing United Church Community Hall 1 49 Bogert Avenue, Toronto, M2N 1K4</h3>
+
+        </div>
+
+        <div class="about bg-[#202F30]">
+            <div class="xl:p-20 p-10 text-center">
+                <h1 class=" text-5xl font-bold rev-text">Welcome to the New Horizons</h1>
+                <div class="text-content">
+                    <p class="xl:text-2xl lg:text-xl md:text-xl text-2xl xl:px-48 py-3 lg:px-20 rev-text w-3/4 justify-self-center justify-items-center m-auto">
+                        We have come together from diverse Filipino culture and many different
+                        backgrounds to celebrate our love relationship with God.
+                    </p>
+                    <p class="xl:text-2xl lg:text-xl md:text-xl text-2xl xl:px-48 py-10 lg:px-3 rev-text w-3/4 justify-self-center justify-items-center m-auto">
+                        We hope you will find our community to be a place where you can belong, believe and become. If we
+                        can encourage you on your journey in any way, please let us know.
+                    </p>
+
+                    <div class="vision text-center">
+                        <h1 class="text-white text-4xl font-bold rev-text pb-5">Love <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">God</span></h1>
+                        <h1 class="text-white text-4xl font-bold rev-text pb-5">Love <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">People</span></h1>
+                        <h1 class="text-white text-4xl font-bold rev-text pb-5">Make <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-yellow-400">Disciples</span></h1>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pb-20">
+                <div class="py-8 px-10 mx-auto max-w-screen-xl sm:py-6 lg:px-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
+
+                        <div class="col-span-2 sm:col-span-1 md:col-span-2 h-auto md:h-full flex flex-col rounded-lg">
+                            <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow rev-text">
+                                <img src="assets/new_img/2.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                                <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Community</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2 sm:col-span-1 md:col-span-2 rounded-lg">
+                            <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4 rev-text">
+                                <img src="assets/new_img/3.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                                <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Empower Young People</h3>
+                            </div>
+                            <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 rounded-lg">
+                                <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 rev-text">
+                                    <img src="assets/new_img/5.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                                    <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Praise</h3>
+                                </div>
+                                <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 rev-text">
+                                    <img src="assets/new_img/6.png" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                                    <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Worship</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col rounded-lg rev-text">
+                            <div href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow rev-text">
+                                <img src="assets/church/2.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                                <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Get In Touch</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer h-full w-full bg-zinc-900">
+            <div class="text-footer grid lg:grid-cols-2 grid-cols-1 flex justify-center">
+                <div class="icons content-center m-10">
+                    <a href="mailto:disciple@fcfellowship.ca" class="block pb-4">
+                        <svg  class="email inline me-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20"><path fill="white" d="m440 6.5-416 239.9c-34.4 19.9-31.1 70.8 5.7 85.9l114.3 47.3v84.4c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zm-248 457.5v-64.6l36.6 15.1zm212.6-28.7-153.8-63.5 140.2-202.3c10.7-15.5-9.5-33.5-23.7-21.2l-211.5 184.3-107.8-44.6 416-240z"/></svg>
+                        <strong class="text-sm text-white font-bold">
+                            disciple@fcfellowship.ca
+                        </strong>
+                    </a>
+
+                    <a class="block pb-4">
+                        <svg class="contact inline me-3" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                            
+                        <strong class="text-sm text-white font-bold">
+                            647-898-4769
+                        </strong>
+                    </a>
+
+                    <a href="https://www.facebook.com/FCFTorontoCA" class="block pb-4">
+                        <svg class="facebook inline me-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="20"><rect fill="#1877f2" height="512" rx="15%" width="512"/><path d="m355.6 330 11.4-74h-71v-48c0-20.2 9.9-40 41.7-40h32.3v-63s-29.3-5-57.3-5c-58.5 0-96.7 35.4-96.7 99.6v56.4h-65v74h65v182h80v-182z" fill="#fff"/></svg>
+                        <strong class="text-sm text-white font-bold">
+                            Filipino Christian Fellowship of Toronto
+                        </strong>
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/WxfH1E4V92j1qXNN7" class="block pb-4">
+                        <svg class="loc inline me-3" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" width="25"><path d="m52.5733 29.11c0-9.3149-7.1338-16.8923-15.9034-16.8923s-15.9034 7.5773-15.9034 16.8963c.0027.4653.2238 11.6088 12.9612 31.2452a3.4626 3.4626 0 0 0 2.8174 1.9343c1.8394 0 3.0941-2.0266 3.2162-2.2327 12.8187-19.6473 12.8187-30.5074 12.812-30.9508zm-15.9033 6.8035a7.0826 7.0826 0 1 1 7.0826-7.0826 7.0907 7.0907 0 0 1 -7.0826 7.0826z" fill="#d22f27"/><path d="m52.5733 29.11c0-9.3149-7.1338-16.8923-15.9034-16.8923a14.96 14.96 0 0 0 -3.8645.5254c8.3948.4493 15.0989 7.8225 15.0989 16.849.0068.4436.0068 11.3036-12.812 30.9509a5.8543 5.8543 0 0 1 -.5865.7972 2.8549 2.8549 0 0 0 2.0393.9534c1.8394 0 3.0941-2.0266 3.2162-2.2327 12.8187-19.6474 12.8187-30.5075 12.812-30.9509z" fill="#ea5a47"/><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m36.5451 62.2935a3.4628 3.4628 0 0 1 -2.8174-1.9343c-12.7377-19.6364-12.9585-30.7799-12.9612-31.2452 0-9.3191 7.1337-16.8964 15.9034-16.8964s15.9034 7.5773 15.9034 16.8924c.0068.4436.0068 11.3036-12.812 30.9509-.1221.206-1.3768 2.2326-3.2162 2.2326z"/><path d="m36.67 35.9135a7.0826 7.0826 0 1 1 7.0827-7.0826 7.0906 7.0906 0 0 1 -7.0827 7.0826z"/></g></svg>
+                        <strong class="text-sm text-white font-bold">
+                            Lansing United Church Community Hall 1 49 Bogert Avenue, Toronto, M2N 1K4
+                        </strong>
+                    </a>
+                </div>
+                <div class="text justify-items-center text-center py-20 px-10 place-items-center">
+                    <img src="assets/img/New Horizon_White.png" alt="" class="w-16 m-auto">
+                    <p class="text-white text-xs">© 2019 - 2024 Filipino Christian Fellowship Of Toronto, Ontario</p>
+                </div>
             </div>
         </div>
     </div>
+
+
 
 
     <script src="script/index.js"></script>

@@ -7,34 +7,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="../styles/bg_style.css">
+    <link rel="icon" href="../assets/img/New Horizons.ico">
 
 </head>
 <body>
 
-    <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
+    <nav class="flex justify-between items-center xl:p-10 p-3 w-full">
         <div class="logo">
             <img src="../assets/img/New Horizons.png" alt="logo" class="xl:w-[5%] w-[7%] justify-start inline">
             <strong>New Horizons</strong>
         </div>
 
-        <ul class="flex-row justify-end gap-4 hidden xl:flex ">
+        <ul class="flex-row justify-end gap-4 hidden lg:flex ">
             <li><a href="../index.html">Home</a></li>
             <li class="relative cursor-pointer w-max drop-about">About Us
-                <div class="absolute hidden bg-zinc-900 w-max p-4">
+                <div class="absolute hidden bg-zinc-900 w-max p-4 about-btn">
                     <ul>
                         <li><a href="../pages/about.html" class="text-white">Who we are?</a></li>
                             
-                        <li><a href="" class="text-white">History</a></li>
+                        <li><a href="../pages/teams.html" class="text-white">Our Team</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a href="#">Beliefs</a></li>
-            <li><a href="#">Give</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../pages/beliefs.html">Beliefs</a></li>
+            <li><a href="../pages/give.html">Give</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="lg:hidden flex items-center z-20">
+            <button class="text-white focus:outline-none" id="hamburger-icon">
+                <svg class="w-6 h-6" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <ul id="mobile-menu" class="flex-row justify-end gap-4 lg:hidden hidden absolute top-0 left-0 w-full bg-white p-4">
+            <li><a href="../index.html">Home</a></li>
+            <li class="relative cursor-pointer w-max drop-about  ">About Us
+                <div class="about-btn hidden bg-white w-max p-4">
+                    <ul>
+                        <li><a href="../pages/about.html">Who we are?</a></li>
+                        <li><a href="../pages/teams.html">Our Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../pages/beliefs.html">Beliefs</a></li>
+            <li><a href="../pages/give.html">Give</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="team-section bg-fixed h-[40vh] w-full header-team bg-white flex flex-col items-center justify-center text-center">
+    <header class="team-section bg-fixed w-full header-team bg-white flex flex-col items-center justify-center text-center sm:py-44 py-20">
         <h1 class="font-bold text-6xl">Our Team</h1>
         <p class="italic inline pt-3">United in Faith, Stronger as One – Meet the Team, Join the Journey!</p>
 

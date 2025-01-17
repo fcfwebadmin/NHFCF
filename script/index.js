@@ -5,6 +5,25 @@ let bg = document.querySelector('#bg');
 let text = document.querySelector('#text');
 let subTitle = document.querySelector('.sub-title');
 
+
+document.onreadystatechange = function() {
+    let state = document.readyState;
+
+    if(state === 'interactive') {
+        document.querySelector(".icon-load").classList.remove("opacity-0");
+        document.querySelector("#loading-state").classList.add("opacity-0");
+        document.querySelector("body").classList.add("bg-gradient-to-r", "from-indigo-500", "h-screen");
+
+        document.querySelector("body").classList.add("transition-all", "duration-700");
+    }else if(state === 'complete') {
+        setInterval(() => {
+            document.querySelector("#loading-state").classList.remove("opacity-0","transition-opacity", "duration-[1000]");
+            document.querySelector(".icon-load").classList.add("opacity-0","transition-opacity", "duration-[1200]", "delay-300");
+        }, 2500)
+        
+    }
+}
+
 window.addEventListener('scroll', () => {
     let scroll = window.scrollY;
 

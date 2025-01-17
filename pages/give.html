@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="scroll-bhvr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Give</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/bg_style.css">
+    <link rel="icon" href="../assets/img/New Horizons.ico">
 </head>
 <body>
     <nav class="flex justify-between items-center xl:p-10 p-3 absolute z-20 w-full">
@@ -15,30 +16,114 @@
             <strong>New Horizons</strong>
         </div>
 
-        <ul class="flex-row justify-end gap-4 hidden xl:flex ">
+        <ul class="flex-row justify-end gap-4 hidden lg:flex ">
             <li><a href="../index.html">Home</a></li>
             <li class="relative cursor-pointer w-max drop-about">About Us
-                <div class="absolute hidden bg-zinc-900 w-max p-4">
+                <div class="absolute hidden bg-zinc-900 w-max p-4 about-btn">
                     <ul>
                         <li><a href="../pages/about.html" class="text-white">Who we are?</a></li>
-
-                        <li><a href="../pages/teams.html" class="text-white">History</a></li>
+                            
+                        <li><a href="../pages/teams.html" class="text-white">Our Team</a></li>
                     </ul>
                 </div>
             </li>
             <li><a href="../pages/beliefs.html">Beliefs</a></li>
-            <li><a href="#">Give</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../pages/give.html">Give</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="lg:hidden flex items-center z-20">
+            <button class="text-white focus:outline-none" id="hamburger-icon">
+                <svg class="w-6 h-6" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <ul id="mobile-menu" class="flex-row justify-end gap-4 lg:hidden hidden absolute top-0 left-0 w-full bg-white p-4">
+            <li><a href="../index.html">Home</a></li>
+            <li class="relative cursor-pointer w-max drop-about  ">About Us
+                <div class="about-btn hidden bg-white w-max p-4">
+                    <ul>
+                        <li><a href="../pages/about.html">Who we are?</a></li>
+                        <li><a href="../pages/teams.html">Our Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../pages/beliefs.html">Beliefs</a></li>
+            <li><a href="../pages/give.html">Give</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <header
-        class="beliefs-section bg-fixed h-[40vh] w-full header-team bg-white flex flex-col items-center justify-center text-center">
-        <h1 class="font-bold text-6xl">Give</h1>
-        <p class="italic inline pt-3">We Appriciate Every Donation You Give</p>
+        class="give-section bg-fixed pt-36 px-10 w-full header-team bg-white flex flex-col items-center justify-center text-center">
+        <h1 class="font-bold sm:text-6xl text-3xl w-3/4">Experiencing God’s abundant grace inspires us to give generously</h1>
+        <p class="inline pt-3 text-[#828282] sm:text-2xl text-xl my-10">your generosity fuels our mission to spread love, serve others, and building a stronger community. <br> Every gift, big or small, helps us bring hope and transformation.</p>
+        <a href="#info-giving" class="text-white p-4 sm:text-md text-sm bg-[#102D41] rounded-md" id="give-btn">Learn more about giving</a>
     </header>
 
-    <div class="container mx-auto p-5">
+    <div class="content-give">
+        <img src="../assets/img/give_img.jpg" alt="" class="m-auto sm:py-10 sm:px-14 py-5 px-10 w-full">
+    </div>
+
+    <div id="info-giving" class="px-14 pb-14 w-full">
+        <h2 class="font-bold sm:text-5xl text-2xl sm:w-3/4 w-full pt-10">Ways to Give</h2>
+        <p class="pt-2 text-[#828282] sm:text-2xl text-md sm:w-2/4 w-3/5">Giving is an act of worship. It’s our way of partnering with God in His work to transform lives and bring hope to our community.</p>
+
+        <div id="giving" class="grid sm:grid-cols-2 grid-cols-1 gap-3 mt-10">
+            <div id="person" class="rounded-xl shadow-xl pb-20 pt-10 px-10">
+                <h4 class="sm:text-2xl text-xl font-bold">In-Person</h4>
+                <p class="sm:text-xl text-[#828282] mt-10">Give during our Sunday services.</p>
+            </div>
+            <div id="online" class="rounded-xl shadow-xl pb-20 pt-10 px-10">
+                <h4 class="sm:text-2xl font-bold">Online Giving</h4>
+                <p class="sm:text-xl text-md text-[#828282] mt-10">To send your donation via e-transfer, add Filipino Christian Fellowship
+                    as a recipient and use the email address <strong class="font-bold text-zinc-900">offerings@fcfellowship.ca</strong>.
+                    The account is configured for automatic deposit, so there’s no need 
+                    to set up a security question or answer.</p>
+            </div>
+        </div>
+
+        <p class="text-[#828282] flex justify-center py-10 font-bold">To learn about additional giving options, such as asset contributions and planned giving, please reach out to us.</p>
+    </div>
+
+    <div class="faq px-14 pb-14 w-full">
+        <h2 class="font-bold sm:text-5xl text-2xl sm:w-3/4 w-full">Frequently Ask Questions (FAQ)</h2>
+        <div class="faq-items py-20">
+            <div class="item my-10">
+                <button class="text-2xl font-bold w-full text-left">How is my donation used?<i class="arrow float-right rotate-[45deg] transition-all ease-in-out duration-1000"></i></button>
+
+                <p class="sm:w-2/4 w-full hidden">Your contributions support various ministries, including community 
+                    outreach, global missions, church operations, and programs that bring
+                    hope and transformation.</p>
+            </div>
+            
+            <div class="item my-10">
+                <button class="text-2xl font-bold w-full text-left">Is my donation tax-deductible?<i class="arrow float-right rotate-[45deg] transition-all ease-in-out duration-1000"></i></button>
+
+                <p class="sm:w-2/4 w-full hidden">Yes, all contributions are tax-deductible. You will receive an annual giving
+                    statement for your records.</p>
+            </div>
+
+            <div class="item my-10">
+                <button class="text-2xl font-bold w-full text-left">Can I give if I’m not a member of the church?<i class="arrow float-right rotate-[45deg] transition-all ease-in-out duration-1000"></i></button>
+
+                <p class="sm:w-2/4 w-full hidden">Yes! Anyone who feels led to support our mission is welcome to give,
+                    regardless of membership.</p>
+            </div>
+
+            <div class="item my-10">
+                <button class="text-2xl font-bold w-full text-left">How do I get help with online giving?<i class="arrow float-right rotate-[45deg] transition-all ease-in-out duration-1000"></i></button>
+
+                <p class="sm:w-2/4 w-full hidden">If you need assistance, feel free to contact us at disciple@fcfellowship.ca or call 
+                    647-898-4769, and our team will gladly help you.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container mx-auto p-5">
         <h1 class="text-3xl font-bold">INTERAC E-TRANSFER INSTRUCTIONS</h1>
         <div class="p-5 grid sm:grid-cols-2 grid-cols-1 gap-4 sm:w-3/5 w-full m-auto">
             <div class="cont p-5 border-solid border-2 border-sky-500 rounded-lg">
@@ -84,7 +169,7 @@
                 <img src="../assets/img/note.png" alt="" class="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="footer h-full w-full bg-zinc-900">
         <div class="text-footer grid lg:grid-cols-2 grid-cols-1 flex justify-center">
@@ -154,5 +239,6 @@
 
 
     <script src="../script/imported.js" type="module"></script>
+    <script src="../script/give.js"></script>
 </body>
 </html>
