@@ -17,5 +17,23 @@ window.addEventListener("scroll", () => {
 
 });
 
+const workerURL = "https://grev-worker2.clarence-juanata03.workers.dev/";
+
+
+fetch(workerURL)
+.then(res=> {
+    if(!res.ok) {
+        throw new Error("URL IS NOT ACCESSIBLE");
+    }
+    return res.json();
+}).then(data => {
+    console.log(JSON.stringify(data, null, 2));
+    console.log(data.result.reviews);
+
+}).catch(err => {
+    console.log(`Error ${err}`);
+    
+})
+
 
 

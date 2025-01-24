@@ -61,4 +61,15 @@ header.contact-section {
     display: inline-block;
     padding: 8px;
 }
+
+.image-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.image-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
   

@@ -7,7 +7,10 @@ body {
      /* background-color: #9FB1B7 !important; */
      /* background-image: linear-gradient(132deg, #25363a 0%, #78929e 100%); */
      background-color: #25363a;
-     background-image: linear-gradient(0deg, #25363a 0%, #78929e 50%, #ffffff 100%);
+     /* background-image: linear-gradient(0deg, #25363a 0%, #78929e 50%, #ffffff 100%); */
+     /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+     background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+     /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
 }
 
 .hide {
@@ -19,6 +22,11 @@ body {
     opacity: 1;
     transition: all 2s ease-in-out;
     transform: translate(0);
+}
+
+.loading-bg {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
 }
 
 

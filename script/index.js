@@ -12,7 +12,7 @@ document.onreadystatechange = function() {
     if(state === 'interactive') {
         document.querySelector(".icon-load").classList.remove("opacity-0");
         document.querySelector("#loading-state").classList.add("opacity-0");
-        document.querySelector("body").classList.add("bg-gradient-to-r", "from-indigo-500", "h-screen");
+        document.querySelector("body").classList.add("loading-bg");
 
         document.querySelector("body").classList.add("transition-all", "duration-700");
     }else if(state === 'complete') {
